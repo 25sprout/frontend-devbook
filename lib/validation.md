@@ -20,7 +20,7 @@
 
 舉例來說你的表單可能會長這樣
 
-```javascript
+```html
 <form method="POST" action="POST的網址" enctype="multipart/form-data" id="myform">
    <div class="form-group">
       <label>Email address</label>
