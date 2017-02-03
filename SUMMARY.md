@@ -25,7 +25,7 @@
 * 開源 Library 在專案上使用的案例
  * [jQuery UI](lib/jqueryui.md)
  * [Bootstrap](lib/bootstrap.md)
- * [jQuery Validate](lib/validate.md)
+ * [jQuery Validate](lib/validation.md)
  * [code-prettify](lib/prettify.md)
 * 第三方服務串接範例
  * [Facebook Login](thirdpty/facebooklogin.md)
