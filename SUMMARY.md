@@ -28,6 +28,7 @@
  * [Bootstrap](lib/bootstrap.md)
  * [jQuery Validate](lib/validation.md)
  * [code-prettify](lib/prettify.md)
+ * [TWzipcode](lib/twzipcode.md)
 * 第三方服務串接範例
  * [Facebook Login](thirdpty/facebooklogin.md)
  * [Facebook Get Fan Page Thread](thirdpty/facebookfanpage.md)
