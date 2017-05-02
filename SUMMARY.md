@@ -23,7 +23,7 @@
  * [AngularJS](language/angular.md)
 * CSS3 實作技巧分享
  * [跨瀏覽器相容性補帖](css3/browser.md)
-* 開源 Library 在專案上使用的案例
+* [開源 Library 在專案上使用的案例](lib/README.md)
  * [jQuery UI](lib/jqueryui.md)
  * [Bootstrap](lib/bootstrap.md)
  * [jQuery Validate](lib/validation.md)
