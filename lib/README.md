@@ -6,9 +6,9 @@
 
 ## jQuery
 
-- [Bootstrap](http://getbootstrap.com/): 最流行的 CSS 框架，[範例](lib/bootstrap.md)
-- [jQuery UI](https://jqueryui.com/): 提供好用的 jQuery ui，[範例](lib/jqueryui.md)
-- [jQuery Validation](https://jqueryvalidation.org/): 提供好用的 jQuery validation method，[範例](lib/validation.md)
+- [Bootstrap](http://getbootstrap.com/): 最流行的 CSS 框架，[範例](bootstrap.md)
+- [jQuery UI](https://jqueryui.com/): 提供好用的 jQuery ui，[範例](jqueryui.md)
+- [jQuery Validation](https://jqueryvalidation.org/): 提供好用的 jQuery validation method，[範例](validation.md)
 
 ## React
 
@@ -19,5 +19,5 @@
 ## 通用
 
 - [swipe](http://lyfeyaj.github.io/swipe/): 簡單的 slide show library ，可以很好的跟 jquery, react, angular 結合使用。
-- [Code Prettify](https://github.com/google/code-prettify): 程式碼 Highlight display library，[範例](lib/prettify.md)
-- twzipcode: 提供台灣縣市的下拉式選單，有各 framework 實作，[範例](lib/twzipcode)
+- [Code Prettify](https://github.com/google/code-prettify): 程式碼 Highlight display library，[範例](prettify.md)
+- twzipcode: 提供台灣縣市的下拉式選單，有各 framework 實作，[範例](twzipcode.md)
