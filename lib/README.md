@@ -9,7 +9,7 @@
 - [Bootstrap](http://getbootstrap.com/): 最流行的 CSS 框架，[範例](bootstrap.md)
 - [jQuery UI](https://jqueryui.com/): 提供好用的 jQuery ui，[範例](jqueryui.md)
 - [jQuery Validation](https://jqueryvalidation.org/): 提供好用的 jQuery validation method，[範例](validation.md)
-- [CKEditor](http://ckeditor.com/): 又愛又恨的編輯器，[範例](lib/ckeditor.md)
+- [CKEditor](http://ckeditor.com/): 又愛又恨的編輯器，[範例](ckeditor.md)
 
 ## React
 
