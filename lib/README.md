@@ -16,6 +16,10 @@
 - [react-lazyload](https://github.com/jasonslyvia/react-lazyload): Lazyload Component
 - [valle](https://github.com/jessy1092/valle): 提供簡單且可以客製化的 react validate library
 - [react-container-helper](https://github.com/jessy1092/react-container-helper): 提供簡單的 API 產生 react container component 來處理 component 的 state
+- [react-google-maps](https://github.com/tomchentw/react-google-maps): 結合 google map 的 react component
+- [react-scroll](https://github.com/fisshy/react-scroll): 處理 scroll 事件，可以 scroll 到特定 element
+- [react-select](https://github.com/JedWatson/react-select): react 高度可客製化的下拉式選單
+
 
 ## 通用
 
