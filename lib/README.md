@@ -10,6 +10,7 @@
 - [jQuery UI](https://jqueryui.com/): 提供好用的 jQuery ui，[範例](jqueryui.md)
 - [jQuery Validation](https://jqueryvalidation.org/): 提供好用的 jQuery validation method，[範例](validation.md)
 - [CKEditor](http://ckeditor.com/): 又愛又恨的編輯器，[範例](ckeditor.md)
+- [intl-tel-input](https://github.com/jackocnr/intl-tel-input): 電話的國碼 UI 套件
 
 ## React
 
@@ -21,8 +22,9 @@
 - [react-select](https://github.com/JedWatson/react-select): react 高度可客製化的下拉式選單
 
 
-## 通用
+## Javascript 通用
 
 - [swipe](http://lyfeyaj.github.io/swipe/): 簡單的 slide show library ，可以很好的跟 jquery, react, angular 結合使用。
+- [Swiper](http://idangero.us/swiper/demos/#.WWbewtOGNTY): Most Modern Mobile Touch Slider，翰品使用
 - [Code Prettify](https://github.com/google/code-prettify): 程式碼 Highlight display library，[範例](prettify.md)
 - twzipcode: 提供台灣縣市的下拉式選單，有各 framework 實作，[範例](twzipcode.md)
