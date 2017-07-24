@@ -46,5 +46,6 @@
  * [Terminal 指令](tool/terminal.md)
  * [Git 指令](tool/git.md)
  * [Sketch](tool/sketch.md)
-
+* META
+ * [.htaccess redirect](meta/redirect.md)
 
