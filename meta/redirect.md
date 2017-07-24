@@ -18,7 +18,7 @@ RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|LinkedInBot|Twitterbot
 1. QSA 代表把前一個網址的 query string 原封不動帶給下一個網址。
 2. R=302 是叫瀏覽器網址要改變。
 3. L 代表是這個 condition 最後一行。
-4. `$1` `$2`：這些是變數，來自於你前面括號的地方，如果你有巢狀括號，則是由外而內。`(($2)) -> $1`
+4. `$1` `$2`：這些是變數，來自於你前面括號的地方，編號的順序就是由左至右。
 5. 左方是符合網址，右方是轉導網址，兩個都要以目前這隻 htaccess 放置的位置來寫路徑。
 6. 在測試的時候可以把 RewriteCond 先註解掉，測成功之後再加上去，就不用一直去 fb debug。
 
