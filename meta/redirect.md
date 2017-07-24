@@ -27,7 +27,7 @@ RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|LinkedInBot|Twitterbot
 把 `/tw/featureinfo?f=FILENAME` -> `/static/meta.php?language=tw&type=featureinfo&f=FILENAME`
 
 ```
-RewriteRule ^((tw|en)/)?featureinfo /static/meta.php?language=$2&type=featureinfo [QSA,R=302,L]
+RewriteRule ^((tw|en)/)?featureinfo https://%{HTTP_HOST}/static/meta.php?language=$2&type=featureinfo [QSA,R=302,L]
 ```
 
 #### 範例二
@@ -35,7 +35,7 @@ RewriteRule ^((tw|en)/)?featureinfo /static/meta.php?language=$2&type=featureinf
 把 `/index.php?id=YOURID` -> `/PATH/TO/meta_ext.php?id=YOURID`
 
 ```
-RewriteRule ^index.php /PATH/TO/meta_ext.php [QSA,L]
+RewriteRule ^index.php https://%{HTTP_HOST}/PATH/TO/meta_ext.php [QSA,L]
 ```
 
 #### 範例三
