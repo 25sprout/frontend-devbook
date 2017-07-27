@@ -6,11 +6,17 @@
 
 ## .htaccess 撰寫
 
-先加上 RewriteCond 有點像在寫程式時的 `if (condition) { ... }` ，以下判斷式可以協助你解決 facebook, linkedin, twitter, pintrest, google
+先加上 RewriteCond 有點像在寫程式時的 `if (condition) { ... }` ，以下判斷式可以協助你解決 facebook, linkedin, twitter, pintrest, google, Slack
+
+補充資料：
+- slack: https://api.slack.com/robots
+- Facebook: https://developers.facebook.com/docs/sharing/webmasters/crawler
+- Google: https://support.google.com/webmasters/answer/1061943?hl=en
+
 
 ```
 # redirect bots to meta file
-RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|LinkedInBot|Twitterbot|Pinterest|Google.*)
+RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|LinkedInBot|Slackbot|Twitterbot|Pinterest|Google.*)
 ```
 
 接下來寫符合規則的人，要做哪些轉導的動作，這邊要看你的網站架構自己摸索一下 :555:，只能從我修改的分享一些筆記：
