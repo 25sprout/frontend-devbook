@@ -6,7 +6,26 @@
 ---
 
 ### 判斷 UserAgent
-可以用 userAgent 去做一些 UI的變化或是 Bug 的修正。
+
+網頁有時候需要針對不同的 瀏覽器 或是 device 做一些 UI 變化，我目前用過最好用的是 [ua-parser-js](https://github.com/faisalman/ua-parser-js)。
+
+用起來也超級簡單無痛上手，已經試過 IE8, IE9 也都正確判斷。
+
+```
+function detectLowerBrowser() {
+	var uaParser = new UAParser();
+
+	if (uaParser) {
+		uaBrowser = uaParser.getBrowser();
+		if (uaBrowser.name === 'IE') {
+			// show hint for IE
+		}
+	}
+}
+```
+
+以前會這樣自己寫
+
 ```javascript
 //javascript 用法
 navigator.userAgent;
@@ -19,7 +38,9 @@ if(navigator.userAgent.indexOf("MSIE 8") != -1 || navigator.userAgent.indexOf("M
      //如果是其他的
 }
 ```
+
 或是用 PHP 去判斷 User Agent。
+
 ```html
 <?php
 	$useragent=$_SERVER['HTTP_USER_AGENT'];
@@ -182,6 +203,29 @@ function scrollToEle(element,animate,posY){
 overflowBody(true);
 overflowBody(false);
 ```
+
+```javascript
+function overflowBody(status){
+	if(status){
+		$('body').addClass('freeze');
+	} else {
+		$('body').removeClass('freeze');
+	}
+}
+```
+
+```css
+body {
+	...
+	&.freeze {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+}
+```
+
+以前是用下面這樣的寫法，但發現 hidden 之後再解開，會常常不能恢復捲動
 
 ```javascript
 function overflowBody(status){
@@ -423,3 +467,51 @@ $('.target').delay(1000).queue(function(next){
 	next();
 });
 ```
+
+### 偵測網頁現在有沒有捲軸
+
+```javascript
+hasScrollBar = document.body.scrollHeight > document.documentElement.clientHeight;
+```
+
+### 偵測網頁是不是捲到最下面了
+
+利用一些 setTimeout 跟 `scrollDetect` 變數減少計算的次數
+
+```javascript
+var hasScrollBar = false;
+var scrollDetect = true;
+
+function toggleScrollHint() {
+	if (scrollDetect) {
+		scrollDetect = false;
+
+		scrollY = $(window).scrollTop();
+		var isScrollToBottom = ($(window).scrollTop() + $(window).height()) >= ($(document).height() - 120);
+
+		if (hasScrollBar && !isScrollToBottom) {
+			$('.scroll-to-bottom').removeClass('_hide');
+			setTimeout(function(){
+				$('.scroll-to-bottom').addClass('_show');
+				setTimeout(function(){
+					scrollDetect = true;
+				}, 40);
+			}, 40);
+		} else {
+			$('.scroll-to-bottom').removeClass('_show');
+			setTimeout(function(){
+				$('.scroll-to-bottom').addClass('_hide');
+				scrollDetect = true;
+			}, 400);
+		}
+	}
+}
+
+$(window).scroll(function () {
+	setTimeout(function(){
+		toggleScrollHint();
+	}, 300);
+});
+```
+
+
