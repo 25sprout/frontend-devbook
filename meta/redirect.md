@@ -12,6 +12,7 @@
 - slack: https://api.slack.com/robots
 - Facebook: https://developers.facebook.com/docs/sharing/webmasters/crawler
 - Google: https://support.google.com/webmasters/answer/1061943?hl=en
+- medium: `Mozilla/5.0 (compatible; Embedly/0.2; +http://support.embed.ly/)`
 
 
 ```
@@ -95,5 +96,16 @@ RewriteRule ^(tw|en)/(TYPE1|TYPE2|TYPE3)/id/([0-9]+)$ http://YOUR_DOMAIN/meta.ph
 
 </html>
 
+```
+
+---
+
+#### 將誤入 meta 頁面的使用者轉回真實網頁
+
+```
+# Redirect user run into meta page back to page
+RewriteCond %{HTTP_USER_AGENT} !(facebookexternalhit/[0-9]|LinkedInBot|Slackbot|Twitterbot|Pinterest|Google.*)
+RewriteCond %{QUERY_STRING} ^id=([^.]*)$
+RewriteRule YOUR_DOMAIN/meta.php /article/%1? [R=302,L]
 ```
 
