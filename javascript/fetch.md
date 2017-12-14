@@ -29,7 +29,8 @@ function loadFeatureInfo(filename) {
 
 使用 fetch 時預設是不會再發出 request 時自動攜帶 cookie。透過 credentials 的設定，可以讓發出的 request 自帶 cookie。
 
-credentials 有兩種 value 可以設定
+credentials 有三種情況
+- `omit`: (預設值) Never send cookies.
 - `include`：local 開發環境
 - `same-origin`: production 環境
 
