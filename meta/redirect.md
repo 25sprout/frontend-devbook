@@ -109,3 +109,15 @@ RewriteCond %{QUERY_STRING} ^id=([^.]*)$
 RewriteRule YOUR_DOMAIN/meta.php /article/%1? [R=302,L]
 ```
 
+#### Debug Note
+.htaccess 會被伺服器 cached 住
+請愛用 curl 看 302 response 被導到哪去，response body 會顯示這個
+```
+<p>The document has moved <a href="https://staging.svy.do/s/api/newvisit.php">here</a>.</p>
+```
+
+確認這兩點就可以了
+ - 確認是不是有成功 302 抓到 rule
+ - 導到的頁面是否正確
+ 
+ 
